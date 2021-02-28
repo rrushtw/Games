@@ -1,7 +1,6 @@
 ﻿using BullsAndCows.BusinessLogicLayer;
 using BullsAndCows.Model;
 using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace BullsAndCows
@@ -72,7 +71,7 @@ namespace BullsAndCows
 
             string append = string.Empty;
             if (TryCount > 1) append += "\r\n";
-            append += $"{TryCount}. {record.Input}\t{record.Bulls}A{record.Cows}B";
+            append += $"{TryCount}. {record.Input:D4}\t{record.Bulls}A{record.Cows}B";
 
             TextBox_Display.Text += append;
             TextBox_Input.Text = string.Empty;
@@ -80,7 +79,7 @@ namespace BullsAndCows
             if (record.Bulls == 4)
             {
                 MessageBox.Show(
-                    text: $"Congratulations.\nThe correct answer is {Game.Answer}.",
+                    text: $"Congratulations.\nThe correct answer is {Game.Answer:D4}.",
                     caption: "Victory",
                     buttons: MessageBoxButtons.OK
                 );
@@ -93,7 +92,7 @@ namespace BullsAndCows
             if (TryCount >= 10)
             {
                 MessageBox.Show(
-                    text: $"\nThe correct answer is {Game.Answer}.",
+                    text: $"The correct answer is {Game.Answer:D4}.",
                     caption: "Defeat",
                     buttons: MessageBoxButtons.OK
                 );
