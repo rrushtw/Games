@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Dasshboard</title>
+    <link href="css/MyStype.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--#region topMenu-->
+    <div class="topMenu col-xs-12">
+        <img class="homeIcon" src="images/Home.png" alt="Home Icon" />
+        <img class="sideIcon" src="images/SideIcon.png" alt="side menu icon" />
+    </div>
+    <!--#endregion-->
+
+    <!--#region sideMenu-->
+    <div class="sideMenu col-xs-1">
+        <a href="#" onclick="ShowSubLlist(this);">Page Set 1</a>
+        <ul>
+            <li>Sub 1</li>
+        </ul>
+        <a href="#" onclick="ShowSubLlist(this);">Page Set 2</a>
+        <ul>
+            <li>Sub 1</li>
+            <li>Sub 2</li>
+            <li>Sub 3</li>
+        </ul>
+        <a href="#" onclick="ShowSubLlist(this);">Page Set 3</a>
+        <ul>
+            <li>Sub 1</li>
+            <li>Sub 2</li>
+            <li>Sub 3</li>
+            <li>Sub 4</li>
+        </ul>
+    </div>
+    <!--#endregion-->
+
+    <!--#region rightSide-->
+    <div class="rightSide col-xs-12 col-md-11">
+        <main>
+            <div class="col-xs-6">1</div>
+            <div class="col-xs-6">2</div>
+        </main>
+
+        <footer class="col-xs-12">
+            <p>I am footer</p>
+        </footer>
+    </div>
+    <!--#endregion-->
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/MyScript.js"></script>
+
+</html>
