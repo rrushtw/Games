@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Dasshboard</title>
     <link href="css/MyStype.css" rel="stylesheet">
+    <link href="css/Gauge.css" rel="stylsheet">
 </head>
 
 <body>
@@ -21,7 +22,8 @@
     <div class="sideMenu col-xs-12 col-md-1">
         <a onclick="ShowSubLlist(this);">Page Set 1</a>
         <ul>
-            <li><a href="#">Sub 1</a></li>
+            <li><a href="./Dashboard.html">Home Page</a></li>
+            <li><a href="./Table.html">Table</a></li>
         </ul>
         <a onclick="ShowSubLlist(this);">Page Set 2</a>
         <ul>
@@ -45,35 +47,145 @@
             <!--#region UP-->
             <div class="container height-420 col-xs-12 col-md-6 col-lg-3">
                 <div class="panel">
-                    Panel 1
+                    <div id="Salse" style="width: 100%; height: 100%;"></div>
                 </div>
             </div>
             <div class="container height-420 col-xs-12 col-md-6 col-lg-3">
                 <div class="panel">
-                    Panel 2
+                    <div id="Expense" style="width: 100%; height: 100%;"></div>
                 </div>
             </div>
-            <div class="container height-420 col-xs-12 col-md-6">
+            <div class="container height-420 col-xs-12 col-md-12 col-lg-6">
                 <div class="panel">
-                    Panel 3
+                    <div id="curve_chart" style="width: 100%; height: 100%;"></div>
                 </div>
             </div>
             <!--#endregion-->
 
             <!--#region Down-->
             <div class="container height-420 col-xs-12 col-md-4">
-                <div class="panel">
-                    Panel 4
+                <div class="panel" style="overflow-y: scroll;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Year/Month</td>
+                                <td>Salse(Dollar)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2020/06</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/07</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/08</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/09</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/10</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/11</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/12</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2021/01</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2021/02</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2021/03</td>
+                                <td>100,000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Average</td>
+                                <td>100,000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="container height-420 col-xs-12 col-md-4">
+                <div class="panel" style="overflow-y: scroll;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Year/Month</td>
+                                <td>Expenses(Dollar)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2020/06</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/07</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/08</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/09</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/10</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/11</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2020/12</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2021/01</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2021/02</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>2021/03</td>
+                                <td>100,000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Average</td>
+                                <td>100,000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </div>
             <div class="container height-420 col-xs-12 col-md-4">
                 <div class="panel">
-                    Panel 5
-                </div>
-            </div>
-            <div class="container height-420 col-xs-12 col-md-4">
-                <div class="panel">
-                    Panel 6
+                    <div id="piechart" style="width: 100%; height:100%;"></div>
                 </div>
             </div>
             <!--#endregion-->
@@ -87,6 +199,7 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="js/MyScript.js"></script>
 
 </html>
