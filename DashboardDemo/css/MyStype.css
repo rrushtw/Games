@@ -17,11 +17,6 @@ body {
     width: 100%;
 }
 
-.topMenu,
-.sideMenu {
-    padding: 10px;
-}
-
 
 /*#region topMenu*/
 
@@ -29,12 +24,14 @@ body {
     background-color: rgba(16, 37, 49, 31);
     color: white;
     height: 50px;
+    padding: 10px;
     width: 100%;
 }
 
 .homeIcon,
 .sideIcon {
     height: 100%;
+    cursor: pointer;
 }
 
 .sideIcon {
@@ -42,9 +39,9 @@ body {
     display: inline-flex;
 }
 
-@media(min-width:768px) {
+@media(min-width:992px) {
     .sideIcon {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -59,7 +56,7 @@ body {
     display: none;
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
     .sideMenu {
         display: inline-block;
     }
@@ -69,11 +66,24 @@ body {
     color: inherit;
     display: inline-block;
     text-decoration: none;
-    margin: 5px 0px;
     width: 100%;
 }
 
-.sideMenu a:hover {
+.sideMenu>a {
+    padding: 10px;
+}
+
+.sideMenu ul {
+    padding: 0px;
+}
+
+.sideMenu ul>li {
+    padding: 5px 0 5px 40px;
+}
+
+.sideMenu a:hover,
+.sideMenu li:hover {
+    background-color: rgba(16, 37, 49, 31);
     cursor: pointer;
 }
 
@@ -84,12 +94,6 @@ body {
 
 
 /*#endregion*/
-
-.rightSide {
-    background-color: #F2F2F2;
-    display: inherit;
-    flex-wrap: inherit;
-}
 
 
 /*#region footer*/
@@ -107,12 +111,51 @@ footer p {
 
 /*#endregion*/
 
+
+/*#region main*/
+
+.rightSide {
+    background-color: #F2F2F2;
+    display: inherit;
+    flex-wrap: inherit;
+    padding-bottom: 10px;
+}
+
 main {
     display: inherit;
     flex-wrap: inherit;
-    min-height: 700px;
     width: 100%;
 }
+
+.container {
+    padding: 5px;
+    overflow: hidden;
+}
+
+@media(min-width:992px) {
+    main {
+        min-height: 720px;
+    }
+    .height-420 {
+        height: 400px;
+    }
+    .height-all {
+        height: 100%;
+    }
+}
+
+.panel {
+    background-color: #EDEDED;
+    border-radius: 5px;
+    box-shadow: 5px 5px lightgray;
+    height: 100%;
+    padding: 10px;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+
+/*#endregion*/
 
 
 /*#region flex RWD*/
@@ -228,7 +271,7 @@ main {
     width: 8.333333%
 }
 
-@media (min-width:576px) {
+@media (min-width:768px) {
     .col-sm-12 {
         width: 100%
     }
@@ -267,7 +310,7 @@ main {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
     .col-md-12 {
         width: 100%
     }
@@ -306,7 +349,7 @@ main {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1200px) {
     .col-lg-12 {
         width: 100%
     }
@@ -345,7 +388,7 @@ main {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1920px) {
     .col-xl-12 {
         width: 100%
     }

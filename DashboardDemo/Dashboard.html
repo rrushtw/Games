@@ -12,29 +12,29 @@
 <body>
     <!--#region topMenu-->
     <div class="topMenu col-xs-12">
-        <img class="homeIcon" src="images/Home.png" alt="Home Icon" />
         <img class="sideIcon" src="images/SideIcon.png" alt="side menu icon" />
+        <img class="homeIcon" src="images/Home.png" alt="Home Icon" />
     </div>
     <!--#endregion-->
 
     <!--#region sideMenu-->
-    <div class="sideMenu col-xs-1">
-        <a href="#" onclick="ShowSubLlist(this);">Page Set 1</a>
+    <div class="sideMenu col-xs-12 col-md-1">
+        <a onclick="ShowSubLlist(this);">Page Set 1</a>
         <ul>
-            <li>Sub 1</li>
+            <li><a href="#">Sub 1</a></li>
         </ul>
-        <a href="#" onclick="ShowSubLlist(this);">Page Set 2</a>
+        <a onclick="ShowSubLlist(this);">Page Set 2</a>
         <ul>
-            <li>Sub 1</li>
-            <li>Sub 2</li>
-            <li>Sub 3</li>
+            <li><a href="#">Sub 1</a></li>
+            <li><a href="#">Sub 2</a></li>
+            <li><a href="#">Sub 3</a></li>
         </ul>
-        <a href="#" onclick="ShowSubLlist(this);">Page Set 3</a>
+        <a onclick="ShowSubLlist(this);">Page Set 3</a>
         <ul>
-            <li>Sub 1</li>
-            <li>Sub 2</li>
-            <li>Sub 3</li>
-            <li>Sub 4</li>
+            <li><a href="#">Sub 1</a></li>
+            <li><a href="#">Sub 2</a></li>
+            <li><a href="#">Sub 3</a></li>
+            <li><a href="#">Sub 4</a></li>
         </ul>
     </div>
     <!--#endregion-->
@@ -42,8 +42,41 @@
     <!--#region rightSide-->
     <div class="rightSide col-xs-12 col-md-11">
         <main>
-            <div class="col-xs-6">1</div>
-            <div class="col-xs-6">2</div>
+            <!--#region UP-->
+            <div class="container height-420 col-xs-12 col-md-6 col-lg-3">
+                <div class="panel">
+                    Panel 1
+                </div>
+            </div>
+            <div class="container height-420 col-xs-12 col-md-6 col-lg-3">
+                <div class="panel">
+                    Panel 2
+                </div>
+            </div>
+            <div class="container height-420 col-xs-12 col-md-6">
+                <div class="panel">
+                    Panel 3
+                </div>
+            </div>
+            <!--#endregion-->
+
+            <!--#region Down-->
+            <div class="container height-420 col-xs-12 col-md-4">
+                <div class="panel">
+                    Panel 4
+                </div>
+            </div>
+            <div class="container height-420 col-xs-12 col-md-4">
+                <div class="panel">
+                    Panel 5
+                </div>
+            </div>
+            <div class="container height-420 col-xs-12 col-md-4">
+                <div class="panel">
+                    Panel 6
+                </div>
+            </div>
+            <!--#endregion-->
         </main>
 
         <footer class="col-xs-12">
