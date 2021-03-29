@@ -135,10 +135,10 @@ main {
 
 @media(min-width:992px) {
     main {
-        min-height: 720px;
+        min-height: 90vh;
     }
-    .height-420 {
-        height: 400px;
+    .height-half {
+        height: 45vh;
     }
     .height-all {
         height: 100%;
