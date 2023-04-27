@@ -8,24 +8,28 @@ class HIndex:
     # end def
 
     def hIndex(self, citations: list[int]) -> int:
-        dict = {}
+        citations = sorted(citations)
 
-        for i in sorted(citations):
-            if i not in dict:
-                dict[i] = 0
+        count: int = len(citations)
+        left: int = 0
+        right: int = count - 1
 
-            for key in dict.keys():
-                if key <= i:
-                    dict[key] += 1
-            # end loop
+        while left <= right:
+            mid: int = int(left + (right - left) / 2)
+
+            if citations[mid] == count - mid:
+                return citations[mid]
+
+            if citations[mid] < count - mid:
+                left = mid + 1
+                continue
+
+            if citations[mid] > count - mid:
+                right = mid - 1
+                # continue
         # end loop
 
-        result: int = 0
-        for key, value in dict.items():
-            result = max(result, min(key, value))
-        # end loop
-
-        return result
+        return count - left
     # end def
 # end class
 
@@ -78,6 +82,45 @@ class TestClass(unittest.TestCase):
         '''test case4'''
         # arrange
         citations = [99, 99, 99]
+
+        # act
+        result = self.__solution.hIndex(citations)
+
+        # assert
+        expect = 3
+        self.assertEqual(expect, result)
+    # end def
+
+    def test_case5(self):
+        '''test case5'''
+        # arrange
+        citations = [0]
+
+        # act
+        result = self.__solution.hIndex(citations)
+
+        # assert
+        expect = 0
+        self.assertEqual(expect, result)
+    # end def
+
+    def test_case6(self):
+        '''test case6'''
+        # arrange
+        citations = [0, 0]
+
+        # act
+        result = self.__solution.hIndex(citations)
+
+        # assert
+        expect = 0
+        self.assertEqual(expect, result)
+    # end def
+
+    def test_case7(self):
+        '''test case7'''
+        # arrange
+        citations = [1, 4, 7, 9]
 
         # act
         result = self.__solution.hIndex(citations)
