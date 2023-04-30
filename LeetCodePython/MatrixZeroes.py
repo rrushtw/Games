@@ -4,16 +4,14 @@ import unittest
 
 class MatrixZeroes:
     def setZeroes(self, matrix: list[list[int]]) -> None:
-        xSkipList: list[int] = []
-        ySkipList: list[int] = []
+        xSkipList = set()
+        ySkipList = set()
         
         for y in range(len(matrix)):
             for x in range(len(matrix[0])):
                 if matrix[y][x] == 0:
-                    if x not in xSkipList:
-                        xSkipList.append(x)
-                    if y not in ySkipList:
-                        ySkipList.append(y)
+                    xSkipList.add(x)
+                    ySkipList.add(y)
             # end loop
         # end loop
 
