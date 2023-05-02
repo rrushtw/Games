@@ -11,6 +11,9 @@ class ListNodeHelper:
     # end def
 
     def ListToNode(self, input:list) -> ListNode:
+        if len(input) == 0:
+            return None
+
         head = ListNode(input[0])
         currentNode = head
 
@@ -24,7 +27,7 @@ class ListNodeHelper:
 
     def NodeToList(self, head: ListNode) -> list:
         if head is None:
-            return None
+            return []
 
         currentElement = head
         list = []
