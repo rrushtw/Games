@@ -1,16 +1,17 @@
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next: 'ListNode' = None):
         self.val = val
         self.next: ListNode = next
     # end def
 # end class
+
 
 class ListNodeHelper:
     def __init__(self) -> None:
         pass
     # end def
 
-    def ListToNode(self, input:list) -> ListNode:
+    def ListToNode(self, input: list) -> ListNode:
         if len(input) == 0:
             return None
 
