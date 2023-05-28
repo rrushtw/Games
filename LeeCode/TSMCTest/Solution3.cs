@@ -22,7 +22,7 @@ namespace LeeCode.TSMCTest
     {
         public int bestSumDownwardTreePath(List<int> parent, List<int> values)
         {
-
+            throw new NotImplementedException();
         }
     }
 }
